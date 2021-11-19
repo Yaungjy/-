@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="./teacher.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css"rel="stylesheet"href="./teacher.css"/>
+    <link rel="icon"type="image/x-icon"href="./teacher.png"/>
+    <title>教师界面</title>
+    <style type="text/css">
+        body{
+            height: 100%;
+  
+    width: 100%;
+  
+    background: url(./bg.jpeg) no-repeat;
+  
+    background-size: cover;
+  
+    position: absolute;
+  
+    overflow: hidden;
+        }
+        .top{
+            width: 80%;
+            height: 200px;
+            text-align: center;/*设置文本居中*/
+            line-height: 200px;/*将文本高度设置为和容器一样的高度，使文本垂直居中*/
+            margin: 0 auto;/*设置div容器居中*/
+            background-color: #E6E6FA;
+        }
+        .left{
+            width: 15%;
+            position: fixed;/*设置左侧导航栏相对于浏览器窗口固定*/
+            left: 8%;
+        }
+        .right{
+            width: 65%;
+            float: right;
+            margin-right: 10%;
+        }
+        ul li{
+            /*ul是块级元素，可以设置宽度和高度*/
+            width: 150px;/*设置li的宽度*/
+            height: 25px;
+            line-height: 25px;/*将文本高度设置为和容器一样的高度，使文本上下距离一样*/
+            padding: 5px;
+            text-align: center;/*文字居中*/
+            list-style: none;/*去掉列表项前面的圆黑点*/
+            border:1px solid #DCDCDC;/*设置边框宽度为1px,实线,颜色为darkgray*/
+        }
+        a{
+            text-decoration: none;/*去除a标签内容的下划线*/
+            color: #000305;
+        }
+        li:hover{
+            background-color: #F5F5F5;
+        }
+        a:active{
+            color: #AFEEEE;
+        }
+        table.wTable { 	margin-top:15px; 
+            	border-collapse:collapse;
+                 	border:1px solid rgba(red, green, blue, alpha);
+                      	width:100%; }
+        table.wTable th { 	vertical-align:baseline;
+             	padding:5px 15px 5px 6px;
+                  	background-color:rgba(red, green, blue, alpha);
+                       	border:1px solid rgba(red, green, blue, alpha);
+                            	text-align:left;
+                                 	color:rgba(red, green, blue, alpha); }
+        table.wTable td { 	vertical-align:text-top; 
+        	padding:6px 15px 6px 6px; 
+            	border:1px solid rgba(red, green, blue, alpha); } 
+        table.wTable tr:nth-child(odd) { 	background-color:rgba(red, green, blue, alpha);}
+        table.wTable tr:nth-child(even) { 	background-color:rgba(red, green, blue, alpha); }
+    </style>
+    <script>
+        function addRow(){
+            var wTable = document.getElementById("wTable");
+            var tBodies = wTable.tBodies;
+            var tbody = tBodies[0];
+            var tr = tbody.insertRow(tbody.rows.length);
+            var td_1 = tr.insertCell(0);
+            td_1.innerHTML = "<div contenteditable='true'>第1列</div>";
+            var td_2 = tr.insertCell(1);
+            td_2.innerHTML = "<div contenteditable='true'>第2列</div>";
+            var td_3 = tr.insertCell(2);
+            td_3.innerHTML = "<div contenteditable='true'>第3列</div>";
+            }
+        
+        </script>
+                     
+</head>
+    <body>
+    <div id="content">
+        <div class="left">
+            <ul class="tab">
+                <li><a href="#section-1">基本信息</a></li>
+                <li><a href="#section-2">教师培训</a></li>
+                <li><a href="#section-3">教师专著</a></li>
+                <li><a href="#section-4">教师专利</a></li>
+                <li><a href="#section-5">教师情况</a></li>
+                <li><a href="#section-6">教学成果</a></li>
+           
+           </ul>
+        </div>
+        <div class="right">
+             <h2 id="section-1">基本信息</h2>
+             <br/>
+             <fieldset>
+             <table class="wTable" id="wTable" style="background-color: rgba(red, green, blue, alpha) ;" border="1" cellpadding="1" width="600" height="120">
+                <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>职工号</th>
+                    <th>性别</th>
+                    <th>年龄</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> <div contenteditable="true">add</div></td>
+                    <td> <div contenteditable="true">add</div></td>
+                    <td> <div contenteditable="true">add</div></td>
+                    <td> <div contenteditable="true">add</div></td>
+                </tr>
+            </tbody>
+            </table>
+        </fieldset>
+            <br />
+            <br />
+              <hr>
+            <h2 id="section-2">教师培训</h2>
+            <br />
+            <br />
+            <table border="1" width="600" height="120">
+                <tr>
+                    <th>职工号</th>
+                    <th>教师姓名</th>
+                    <th>培训进修，交流类型</th>
+                    <th>开始时间</th>
+                    <th>结束时间</th>
+                    <th>备注</th>
+                </tr>
+                <tr>
+                    <td> &nbsp;</td>
+                    <td> &nbsp;</td>
+                    <td> &nbsp;</td>
+                    <td> &nbsp;</td>
+                    <td> &nbsp;</td>
+                    <td> &nbsp;</td>
+                </tr>
+            </table>
+            <br />
+            <br />
+            <hr>
+            <h2 id="section-3">教师专著</h2>
+            <br />
+            <br />
+            <br />
+            <br />
+            <hr>
+            <h2 id="section-4">教师专利</h2>
+            <br />
+            <br />
+            <br />
+            <br />
+            <hr>
+            <h2 id="section-5">教师情况</h2>
+            <br />
+            <br />
+            <br />
+            <br />
+            <hr>
+            <h2 id="section-6">教学成果</h2>
+              <br />
+              <br />
+              <br />
+              <br />
+              <hr>
+          	
+        </div>
+    </div> 
+    <input type="button" onclick="addRow();" style="font-size: 16px;" value="+"/>
+</body>
+</html>
